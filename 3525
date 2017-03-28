@@ -1,0 +1,168 @@
+#studenci=['jeden', 'dwa', 'trzy']
+#print(studenci[2])
+
+#print('sbsrdrhdhrdrhdrh'[2])
+
+
+#n=int(input())
+#if n%2==1
+#    print('Wierd')
+#else:
+#    if N>=2 and N<=5
+ #       print ('not  wieed')
+  #  elif 6<=N<=20#
+
+#print range(10)
+
+#list=[1,2,4,5,6,7,8,9]
+
+#list.append(*46464*)
+#list.apppend(3)
+
+#print(list [-1])
+
+#def hello():
+#    print("hello world")
+#
+#    hello()
+#
+#def hello2(name):
+#    print("hello {}".format(name))
+##hello2("max")
+#
+#def hello3(name="", powitanie="hallo"):
+#    print("{} {}".format(powitanie,name))
+##hello3(name="Pawel")
+#hello3(powitanie="czesc")
+
+#def dodaj(*args):
+#    print(sum(args))
+#
+#dodaj(1,2,3,4,5)
+#
+#def pozdrowienia(**kwargs):
+#    ffor k,v in kwargs.items():
+#    print("{} {}".format(k,v))
+#
+#pozdr={
+#    "hej": "imie1"
+#    "czesc": "imie2"
+#}
+#
+#pozdrowienia(imie1="Asia", imie2="Basia")
+#pozdrowienia(**pozdr)
+
+
+#def hello():
+#    print("hello wasya")
+#
+#my_hello=hello
+#my_hello()
+#
+#def make_hello(greetings):
+#    def hello(name):
+#        print("{} {}".format(greetings, name))
+#        greetings="hello"
+#        return hello
+#
+#my_hello=make_hello("czesc")
+#my_hello("Iza")
+
+#def hello(name):
+#    return "czesc "+name
+#
+#def dodaj_nawiasy(func):
+#    def inner(*args, **kwargs):
+#        return "("+func(*args, **kwargs)+")"
+#    return inner
+##
+##hello_z_nawiasami = dodaj_nawiasy(hello)
+##print(hello("kinga"))
+#@dodaj_nawiasyd
+#def hello(name, name2):
+#    return "czesc2" + name +"i"+name2
+#print(hello("max"))
+
+
+#def generator():
+#    yield 1
+#    yield 2
+#    yield 3
+#gen=generator()
+##
+##print(next(gen))
+##print(next(gen))
+##print(list(gen))
+#
+#for x in gen:
+#    print(x)
+
+#def generato2():
+#    i=1
+#    while i<1000:
+#        yield i
+#        i+=2
+#for x in generato2():
+#    print(x)
+
+
+#imiona=["Robert", "Jola", "Marcin", "Gregory"]
+#nazwiska=["Kowalski", "Nowak"]
+#
+#for i in range(len(imiona)):
+#    print('{} {}'.format(imiona[i], nazwiska[i]))
+
+class Student():
+    def __init__(self, imie, nazwisko, index):
+        self.imie=imie
+        self.nazwisko=nazwisko
+        self.index=index
+        self.czyKobieta=czyKobieta
+        self.__oceny=set()
+
+    def wystaw_ocene(self, nowa_ocena):
+            self.__oceny.add(nowa_ocena)
+
+    def pokaz_oceny(self):
+            return list(self.__oceny)
+
+
+
+
+
+
+    def __repr__(self):
+            return "{} {}".format(self.imie, self.nazwisko)
+
+    def __eq__(self, other):
+            return self.imie==other.imie and self.nazwisko==other.nazwisko
+
+class Uni():
+    def __init__(self):
+        self.students=[]
+
+    def __iter__(self):
+
+        for s in self.students:
+
+            yield s
+
+s1=Student("Jola", "Kowalski", 104, True)
+s2=Student("Jola", "Kowalski", 103, True)
+s3=Student("Jola", "Kowalski", 105, False)
+s4=Student("Jola", "Kowalski", 107, True)
+
+#s1=Student("Jola", "Wozak", 10)
+#s1.wystaw_ocene(5)
+#s1.wystaw_ocene(3)
+#print(sum(s1.pokaz_oceny())/len(s1.pokaz_oceny()))
+#s2=Student("Jola", "Wozak", 1)
+#s1.oceny=[5]
+#print(s1.__oceny)
+
+
+
+
+
+
+

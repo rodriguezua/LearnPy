@@ -1,0 +1,133 @@
+
+#tap=True
+#
+#if tap:
+#    print('jestem na tak')
+#elif 2<3:
+#    print('na nie')
+#
+#else:
+#    print('4')
+#
+##skrocony
+#
+#napis='tak' if 2>3 else 'nie'
+#print(napis)
+
+#for x in range(3,11):
+#    print (x)  for x in range(3,11)
+#
+#tap= [x*2 for x in range(x)]
+#    print(tap)
+#
+
+#arraytap=['a', 'b']
+#y=[strtmp+'f' for strtmp in arraytap if strtmp is not None]
+#print(y)
+
+
+#licnik=0
+#while licnik <10:
+#l   print(licnik)
+#l   print('jestem w petli')
+#l   licnik+=1
+#l
+
+################listy
+
+#x=[]
+#
+#print(x.extend([1]))
+#print(x)
+
+#x.append()
+
+#####################krotki
+
+#x=2,3,4,5   wazne przy przekazaniu argumentow
+#print(type(x))
+
+
+#from collections import namedtuple
+#Point=namedtuple('Point', 'x', 'y')
+#pt1=Point(1.0, 5.0)
+#print(pt1.x)
+
+
+#slowniki
+#x={2:'huj'}
+#print(x.get('b', 0))
+#
+class Point:
+    count=0
+    def __init__(self, x, y):
+        self._x=x
+        self._y=y
+
+    def __str__(self):
+        self.count=0
+        return "{x}, {y}".format(x=self._x,y=self._y)
+
+    def getX(self):
+        return self.__x
+
+    def getY(self):
+        return self.__y
+
+#p=Point(2,1)
+#p2=Point(2,2)
+#
+#print(p)
+#print(p.getX())
+#print(p._x)
+
+class ValuePoint(Point):
+    def __init__(self,x,y,value):
+        self._value=value
+        super().__init__(x,y)
+    def __str__(self):
+        return super().__str__()+"val="+str(self._value)
+
+vp=ValuePoint(2,3,4)
+print(vp)
+
+###ducktypin
+
+def razy2(x):
+    return x*2
+
+l=[1,2,3,4]
+
+#lambda x: x*2, l)
+#print(list(map(lambda x: x*2; 1))
+#with open('file') as f:
+#    pass
+
+#####################moduly    pakiety
+#from math import sin
+#import antigravity
+#
+#from .point import Point as P
+#from .point import Point as P
+#
+#p=P(2,3)
+#print(p)
+#
+
+class Ssak:
+    def glos(self):
+        raise NotImplementedError
+
+class Pies(Ssak):
+    def hau(self):
+        self.glos()
+
+pp= Pies()
+pp.hau()
+
+class List:
+    def count(self):
+        pass
+
+    def empty(self):
+        return self.count()==0

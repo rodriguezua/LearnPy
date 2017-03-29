@@ -27,21 +27,24 @@ while(True):
 #print ("If one of them is a '5', you lose!")
 count = 0
 linecount=0
-while count < int(usrhowmany):
-    num = random.randint(1, int(usrran))
-    print (num, end=" ")
-    count+=1
-    if(count%40==0):
-        print()
-    if num == usrnum:
-        print()
-        print ("We had to generate", count, "numbers to find your number")
-        break
-else:
-    print()
-    print("Your number has not been found in the given range")
-
-
+expr=[]
+for i in range(500000):
+    while count < int(usrhowmany):
+        num = random.randint(1, int(usrran))
+        #print (num, end=" ")
+        count+=1
+        #if(count%40==0):
+            #print()
+        if num == usrnum:
+            #print()
+            #print ("We had to generate", count, "numbers to find your number")
+            expr.append(count)
+            break
+    else:
+        #print()
+        print("Your number has not been found in the given range")
+    count=0
+print ('In average we need ', (sum(expr)/len(expr)), 'to find your number')
 #import random
 #
 #print "Lucky Numbers! 3 numbers will be generated."

@@ -5,7 +5,8 @@ import random
 
 while(True):
     usrnum=input("Select number you want to find:")
-    usrran=input("Select range you want to search:")
+    usrran=input("Select the maximum number in which you want to generate:")
+    usrhowmany=input("Select how many random numbers you want to generate:")
     try:
         usrnum=int(usrnum)
         break
@@ -16,18 +17,28 @@ while(True):
         break
     except:
         print ("Wrong range input!")
-
+    try:
+        usrhowmany=int(usrhowmany)
+        break
+    except:
+        print ("Wrong qty input")
 
 
 #print ("If one of them is a '5', you lose!")
-#range=input()
-#
-#count = 0
-#while count < range:
-#    num = random.randint(1, 10000)
-#    print (num)
-#    if num == '5':
-#
+count = 0
+linecount=0
+while count < int(usrran):
+    num = random.randint(1, 100)
+    print (num, end=", ")
+    count+=1
+    if(count%40==0):
+        print()
+    if num == usrnum:
+        print()
+        print ("We had to generate", count, "numbers to find your number")
+        break
+else:
+    print("Your number has not been found in the given range")
 
 
 #import random

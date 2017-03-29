@@ -1,0 +1,42 @@
+#The user inptuts a number in range 1-100.
+#The user inputs the range in what he wants to run the loop
+
+import random
+usrran='x'
+usrnum='x'
+while(type(usrnum)!=int and type(usrran)!=int):
+    usrnum=int(input("Select number you want to find:"))
+    usrran=int(input("Select range you want to search:"))
+ #   if(type(usrnum)!=int):
+   #     print ("Wrong number input!")
+  #  else:
+   #     print ("Wrong range input!")
+
+
+
+#print ("If one of them is a '5', you lose!")
+#range=input()
+#
+#count = 0
+#while count < range:
+#    num = random.randint(1, 10000)
+#    print (num)
+#    if num == '5':
+#
+
+
+#import random
+#
+#print "Lucky Numbers! 3 numbers will be generated."
+#print "If one of them is a '5', you lose!"
+#
+#count = 0
+#while count < 3:
+#    num = random.randint(1, 6)
+#    print num
+#    if num == 5:
+#        print "Sorry, you lose!"
+#        break
+#    count += 1
+#else:
+#    print "You win!"

@@ -2,20 +2,15 @@
 #The user inputs the range in what he wants to run the loop
 
 import random
-
-while(True):
-    usrnum=input("Select number you want to find:")
-    usrran=input("Select range you want to search:")
-    try:
-        usrnum=int(usrnum)
-        break
-    except:
-        print ("Wrong number input!")
-    try:
-        usrran = int(usrran)
-        break
-    except:
-        print ("Wrong range input!")
+usrran='x'
+usrnum='x'
+while(type(usrnum)!=int and type(usrran)!=int):
+    usrnum=int(input("Select number you want to find:"))
+    usrran=int(input("Select range you want to search:"))
+ #   if(type(usrnum)!=int):
+   #     print ("Wrong number input!")
+  #  else:
+   #     print ("Wrong range input!")
 
 
 
